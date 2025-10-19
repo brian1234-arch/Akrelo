@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: akelo-dashboard
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildCommand: docker build -t akelo-dashboard .
+    startCommand: docker run -p 10000:8000 akelo-dashboard
